@@ -8,8 +8,10 @@ function MainScene:ctor()
             UILabelType = 2, text = "Hello, World", size = 64})
         :align(display.CENTER, display.cx, display.cy)
         :addTo(self)
+    SOCKET = require("src.app.network.socket").new("122.11.61.212",9080)
+    SOCKET:connect()
     -->>>>>>>>>>>>>>>>>>>>>>>>>> pbc test
-    require "protobuf-pbc.protobuf"
+    import "protobuf-pbc.protobuf"
     --  Register
     local fullPath = cc.FileUtils:getInstance():fullPathForFilename("protobuf-pbc/addressbook.pb")
 	-- local fullPath = cc.FileUtils:getInstance():fullPathForFilename("src/config.lua")
