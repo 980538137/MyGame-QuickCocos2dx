@@ -19,6 +19,33 @@ function MainScene:ctor()
 
         elseif eventType == ccui.TouchEventType.ended then
             printf("Touch Down")
+
+            function onRequestFinished(event)
+                local ok = (event.name == "completed")
+                local request = event.request
+
+                if not ok then
+                    --请求失败，显示错误代码和错误信息
+                    print(request:getErrorCode(), request:getErrorMessage())
+                    return
+                end
+
+                local code = request:getResponseStatusCode()
+                if code ~= 200 then
+                    -- 请求结束，但没有返回 200 响应代码
+                    print("failed"..code)
+                    return
+                end
+
+                --请求成功
+                local response = request:getResponseString()
+                print(response)
+            end
+            --创建一个链接，
+            local url = "http://182.92.237.220:8080/dyncfg?channelId=101&ver=1.3.3"
+            local request = network.createHTTPRequest(onRequestFinished, url, "GET")
+            --开始请求
+            request:start()
         elseif eventType == ccui.TouchEventType.canceled then
 
         end
