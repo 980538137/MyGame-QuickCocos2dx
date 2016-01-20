@@ -26,6 +26,18 @@
     <ClInclude Include="targetver.h">
       <Filter>win32</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\pbc\pbc-lua.h" />
+    <ClInclude Include="..\Classes\pbc\src\alloc.h" />
+    <ClInclude Include="..\Classes\pbc\src\array.h" />
+    <ClInclude Include="..\Classes\pbc\src\bootstrap.h" />
+    <ClInclude Include="..\Classes\pbc\src\context.h" />
+    <ClInclude Include="..\Classes\pbc\src\descriptor.pbc.h" />
+    <ClInclude Include="..\Classes\pbc\src\map.h" />
+    <ClInclude Include="..\Classes\pbc\src\pattern.h" />
+    <ClInclude Include="..\Classes\pbc\src\pbc.h" />
+    <ClInclude Include="..\Classes\pbc\src\proto.h" />
+    <ClInclude Include="..\Classes\pbc\src\stringpool.h" />
+    <ClInclude Include="..\Classes\pbc\src\varint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -38,6 +50,20 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>win32</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\pbc\pbc-lua.c" />
+    <ClCompile Include="..\Classes\pbc\src\alloc.c" />
+    <ClCompile Include="..\Classes\pbc\src\array.c" />
+    <ClCompile Include="..\Classes\pbc\src\bootstrap.c" />
+    <ClCompile Include="..\Classes\pbc\src\context.c" />
+    <ClCompile Include="..\Classes\pbc\src\decode.c" />
+    <ClCompile Include="..\Classes\pbc\src\map.c" />
+    <ClCompile Include="..\Classes\pbc\src\pattern.c" />
+    <ClCompile Include="..\Classes\pbc\src\proto.c" />
+    <ClCompile Include="..\Classes\pbc\src\register.c" />
+    <ClCompile Include="..\Classes\pbc\src\rmessage.c" />
+    <ClCompile Include="..\Classes\pbc\src\stringpool.c" />
+    <ClCompile Include="..\Classes\pbc\src\varint.c" />
+    <ClCompile Include="..\Classes\pbc\src\wmessage.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
