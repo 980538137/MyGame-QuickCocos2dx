@@ -20,6 +20,9 @@ function MainScene:ctor()
         elseif eventType == ccui.TouchEventType.ended then
             printf("Touch Down")
 
+            local updateLayer = require("app.scenes.update.UpdateLayer").new()
+            display.replaceScene(updateLayer)
+
             -- function onRequestFinished(event)
             --     local ok = (event.name == "completed")
             --     local request = event.request
@@ -47,7 +50,7 @@ function MainScene:ctor()
             -- local request = network.createHTTPRequest(onRequestFinished, url, "GET")
             -- --开始请求
             -- request:start()
-            self:checkVersion()
+            -- self:checkVersion()
         elseif eventType == ccui.TouchEventType.canceled then
 
         end
@@ -94,9 +97,11 @@ function MainScene:ctor()
 end
 
 function MainScene:onEnter()
+    printf("MainScene:onEnter")
 end
 
 function MainScene:onExit()
+    printf("MainScene:onExit")
 end
 
 function MainScene:checkVersion()

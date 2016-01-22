@@ -13,7 +13,8 @@ function MyApp:run()
     cc.FileUtils:getInstance():addSearchPath("res/")
     cc.FileUtils:getInstance():addSearchPath("src/")
     cc.FileUtils:getInstance():addSearchPath("src/app")
-    self:enterScene("MainScene")
+    -- self:enterScene("MainScene")
+    self:enterScene("update.UpdateLayer")
 end
 
 return MyApp

@@ -7,6 +7,12 @@
         <Image Name="HelloWorld.png" />
         <Image Name="login_btn.png" />
         <Image Name="login_btn_click.png" />
+        <Project Name="UpdateScene.csd" Type="Scene" />
+        <TTF Name="Marker Felt.ttf" />
+        <Image Name="slider_bar_active_9patch.png" />
+        <Image Name="Slider_Back.png" />
+        <Image Name="bg.png" />
+        <Image Name="fore.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>
