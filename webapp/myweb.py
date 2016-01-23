@@ -169,7 +169,7 @@ class download(object):
       web.header('Content-Type','application/octet-stream')
       web.header('Content-disposition', 'attachment; filename=%s' % file_name)
       while True:
-        c = f.read()
+        c = f.read(BUF_SIZE)
         if c:
           yield c
         else:

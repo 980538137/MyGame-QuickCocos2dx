@@ -14,7 +14,8 @@ function MyApp:run()
     cc.FileUtils:getInstance():addSearchPath("src/")
     cc.FileUtils:getInstance():addSearchPath("src/app")
     -- self:enterScene("MainScene")
-    self:enterScene("update.UpdateLayer")
+    local updateLayer = require("app.update.UpdateLayer").new()
+    display.replaceScene(updateLayer)
 end
 
 return MyApp

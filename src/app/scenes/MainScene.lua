@@ -20,7 +20,7 @@ function MainScene:ctor()
         elseif eventType == ccui.TouchEventType.ended then
             printf("Touch Down")
 
-            local updateLayer = require("app.scenes.update.UpdateLayer").new()
+            local updateLayer = require("app.update.UpdateLayer").new()
             display.replaceScene(updateLayer)
 
             -- function onRequestFinished(event)
